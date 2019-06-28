@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
-import './App.css';
 
 class Button extends Component {
+  sendToParent = () => {
+    this.props.handleClick(this.props.name)
+  }
   render(){
     return (
-      <div className="App">
-        <h1>App Component</h1>
+      <div>
+        <button onClick={this.sendToParent} className="btn">{this.props.name}</button>
       </div>
     );
   }
