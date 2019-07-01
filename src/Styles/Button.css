@@ -1,0 +1,13 @@
+.btn-container {
+  flex: 1;
+  flex-wrap: wrap; }
+
+.btn {
+  width: 25%;
+  border-radius: 0;
+  border: 1px solid #8e8e8e;
+  background: #e0e0e0;
+  font-size: 28px;
+  outline: none; }
+  .btn :nth-child(17) {
+    width: 50%; }

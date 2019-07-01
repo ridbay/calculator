@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import Screen from './Screen'
 import Button from './Button'
+import '../Styles/App.css'
+import '../Styles/Calculator.css'
+import '../Styles/Button.css'
 
 class App extends Component {
   constructor(){
@@ -20,11 +23,18 @@ class App extends Component {
   render(){
     const buttons = ['AC', '±', '%', '÷', '7', '8','9', 'x', '4', '5', '6','-','1','2','3','+', '0','.', '=']
     return (
-      <div className="App">
-        <h1>App Component</h1>
+      <div>
+        <h1>Calculator</h1>
+      
+      <div className="calculator">
+        
         <Screen current={this.state.current} result={this.state.result}/>
-        {buttons.map((button, i) => <Button handleClick={this.handleClick} key={i} name={button}/>)}
+        <div className="btn-container">
+          {buttons.map((button, i) => <Button handleClick={this.handleClick} key={i} name={button}/>)}
+        </div>
+        
 
+      </div>
       </div>
     );
   }

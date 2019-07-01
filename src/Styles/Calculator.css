@@ -1,0 +1,10 @@
+.calculator {
+  height: 640px;
+  width: 468px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -320px;
+  margin-left: -234px; }
