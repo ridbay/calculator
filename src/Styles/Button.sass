@@ -7,27 +7,27 @@ $top-row: #d6d6d6
     flex: 1
     flex-wrap: wrap
 
-.btn
-    width: 25%
-    border-radius: 0
-    border: 1px solid $border
-    background: $middle
-    font-size: 28px
-    outline: none
-    &:active
-        background: darken($middle, 20%)
-& :nth-child(17)
-    width: 50%
-    border-radius: 0 0 0 6px
-& :nth-child(4n), & :last-child
-    background: $right-edge
-    color: white 
-    &:active
-        background: darken($right-edge, 20%)
-        color: darken(white, 20%)
-& :nth-child(-n + 3)
-    background: $top-row
-    &:active
-        background: darken($top-row, 20%)  
-& :last-child
-    border-radius: 0 0 6px 0
+    .btn
+        width: 25%
+        border-radius: 0
+        border: 1px solid $border
+        background: $middle
+        font-size: 28px
+        outline: none
+        &:active
+            background: darken($middle, 20%)
+    & :nth-child(17)
+        width: 50%
+        border-radius: 0 0 0 6px
+    & :nth-child(4n), & :last-child
+        background: $right-edge
+        color: white 
+        &:active
+            background: darken($right-edge, 20%)
+            color: darken(white, 20%)
+    & :nth-child(-n + 3)
+        background: $top-row
+        &:active
+            background: darken($top-row, 20%)  
+    & :last-child
+        border-radius: 0 0 6px 0

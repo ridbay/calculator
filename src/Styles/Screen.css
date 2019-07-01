@@ -1,0 +1,8 @@
+.screen {
+  height: 160px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 35px;
+  padding: 0 9px;
+  border-radius: 6px 6px 0 0;
+  font-family: 'Source Sans Pro'; }
