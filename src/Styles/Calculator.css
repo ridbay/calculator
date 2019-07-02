@@ -1,7 +1,7 @@
 .calculator {
   height: 640px;
   width: 468px;
-  display: flex;
+  display: relative;
   flex-direction: column;
   position: absolute;
   top: 50%;

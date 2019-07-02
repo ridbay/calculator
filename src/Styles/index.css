@@ -3,6 +3,12 @@
 @import './Screen.css';
 @import './Button.css';
 
-body {
+/* body {
   margin: 0;
+} */
+
+body {
+  background: #c2c2d6;
+  user-select: none;
+  cursor: default;
 }
