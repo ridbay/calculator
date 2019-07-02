@@ -10,14 +10,49 @@ class App extends Component {
     super()
     this.state = {
       current: [],
-      result: 0
+      result: 0,
+      operator: '+'
     }
   }
 
+  switchOperators = (operator) => {
+      switch(operator){
+        case '÷':
+          return '/'
+        case 'x':
+          return '*'
+      }
+  }
+doMath = (num1, operator, num2) => {
+  let result;
+  operator = operator.replace(/[x÷]/, this.switchOperators);
+  if(!isNaN(num2)){
+    result = eval(num1 + operator + num2);
+    this.setState({result})
+  }
+
+}
   handleClick = (button) =>{
-   const current = [...this.state.current]
-   current.push(button)
-   this.setState({current})
+   let current = [...this.state.current]
+   const result = this.state.result;
+   let operator = this.state.operator
+   const num = parseFloat(current.join(''))
+
+   switch(true){
+     case /[+x\-÷]/.test(button):
+       this.doMath(result, operator, num);
+       operator = button;
+       current = operator
+       break
+      case /\d/.test(button):
+        if(/[+x\-÷]/.test(current)){
+          current = []
+        }
+          current.push(button)
+      break
+   }
+
+   this.setState({current, operator})
   }
 
   render(){
